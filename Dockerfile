@@ -2,10 +2,11 @@ FROM ubuntu:latest
 
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
     gettext \
+    python3-pip \
     texlive-full \
     && rm -rf /var/lib/apt/lists/*
 
-RUN pip install --upgrade \
+RUN pip3 install --upgrade \
     furo \
     myst-parser \
     pygments \
