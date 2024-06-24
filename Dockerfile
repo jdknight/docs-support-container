@@ -19,4 +19,4 @@ RUN pipx install \
     sphinx-intl \
     --include-deps
 
-ENV PATH="$HOME/.local/bin:$PATH"
+ENV PATH="$PATH:/root/.local/bin"
