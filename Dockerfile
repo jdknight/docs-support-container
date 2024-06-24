@@ -18,3 +18,5 @@ RUN pipx install \
     sphinx-inline-tabs \
     sphinx-intl \
     --include-deps
+
+ENV PATH="$HOME/.local/bin:$PATH"
