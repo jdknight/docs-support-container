@@ -3,16 +3,18 @@ FROM ubuntu:latest
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
     gettext \
     git \
+    pipx \
     python-is-python3 \
-    python3-pip \
     rsync \
     texlive-full \
     && rm -rf /var/lib/apt/lists/*
+    && pipx ensurepath
 
-RUN pip3 install --upgrade \
+RUN pipx install \
     furo \
     myst-parser \
     pygments \
     sphinx \
     sphinx-inline-tabs \
-    sphinx-intl
+    sphinx-intl \
+    --include-deps
